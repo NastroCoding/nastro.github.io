@@ -18,14 +18,15 @@
         [Nas]
       </h1>
       <p class="text-xl mt-4 text-red-600 heading-font glowing-text">
-        <b>
-          Web Developer | Code Enthusiast | Tech Explorer
-        </b>
-      </p>      
+        <b> Web Developer | Code Enthusiast | Tech Explorer </b>
+      </p>
     </header>
 
     <!-- About Section -->
-    <section id="about" class="py-16 px-8 w-10/12 m-auto bg-gray-900 rounded-t-lg">
+    <section
+      id="about"
+      class="py-16 px-8 w-10/12 m-auto bg-gray-900 rounded-t-lg"
+    >
       <h2
         class="text-4xl font-bold text-red-600 heading-font"
         data-text="About Me"
@@ -33,32 +34,39 @@
         [About Me]
       </h2>
       <p class="mt-4 text-lg text-gray-300 heading-font">
-        I'm a web developer with a passion for building scalable and
-        efficient systems. I love to explore new technologies and challenge
-        myself with complex problems. I'm doing my best to compete in this
-        position.
+        I'm a web developer with a passion for building scalable and efficient
+        systems. I love to explore new technologies and challenge myself with
+        complex problems. I'm doing my best to compete in this position.
       </p>
     </section>
 
-    <section id="projects" class="py-16 px-8 bg-gray-800 w-10/12 m-auto mb-8 rounded-b-lg">
-      <h2 class="text-4xl font-bold text-red-600 heading-font" data-text="Projects">
+    <section
+      id="projects"
+      class="py-16 px-8 bg-gray-800 w-10/12 m-auto mb-8 rounded-b-lg"
+    >
+      <h2
+        class="text-4xl font-bold text-red-600 heading-font"
+        data-text="Projects"
+      >
         [Projects]
       </h2>
       <div class="mt-8 space-y-8">
         <!-- Project 1 -->
-        <div class="relative bg-gray-700 p-6 rounded-lg shadow-lg hover:shadow-2xl transition">
+        <div
+          class="relative bg-gray-700 p-6 rounded-lg shadow-lg hover:shadow-2xl transition"
+        >
           <!-- Apple-Style Top Bar Inside Card -->
-          <div class="absolute top-0 left-0 w-full bg-gray-900 text-white rounded-t-lg shadow-md flex items-center p-2">
+          <div
+            class="absolute top-0 left-0 w-full bg-gray-900 text-white rounded-t-lg shadow-md flex items-center p-2"
+          >
             <div class="flex items-center">
               <span class="apple-nav-button close-button"></span>
               <span class="apple-nav-button minimize-button"></span>
               <span class="apple-nav-button maximize-button"></span>
             </div>
-            <div class="ml-auto text-sm heading-font">
-              Project One
-            </div>
+            <div class="ml-auto text-sm heading-font">Project One</div>
           </div>
-          
+
           <pre class="code-block mt-10">
             <span class="code-highlight">{
                 "title" : "Travel Web",
@@ -71,21 +79,23 @@
             }</span>
           </pre>
         </div>
-    
+
         <!-- Project 2 -->
-        <div class="relative bg-gray-700 p-6 rounded-lg shadow-lg hover:shadow-2xl transition">
+        <div
+          class="relative bg-gray-700 p-6 rounded-lg shadow-lg hover:shadow-2xl transition"
+        >
           <!-- Apple-Style Top Bar Inside Card -->
-          <div class="absolute top-0 left-0 w-full bg-gray-900 text-white rounded-t-lg shadow-md flex items-center p-2">
+          <div
+            class="absolute top-0 left-0 w-full bg-gray-900 text-white rounded-t-lg shadow-md flex items-center p-2"
+          >
             <div class="flex items-center">
               <span class="apple-nav-button close-button"></span>
               <span class="apple-nav-button minimize-button"></span>
               <span class="apple-nav-button maximize-button"></span>
             </div>
-            <div class="ml-auto text-sm heading-font">
-              Project Two
-            </div>
+            <div class="ml-auto text-sm heading-font">Project Two</div>
           </div>
-    
+
           <pre class="code-block mt-10">
             <span class="code-highlight">{
                 "title" : "Quiz App",
@@ -203,38 +213,19 @@
         easing: "linear",
       });
 
-      // Select all drops
-      const drops = document.querySelectorAll(".drop");
-
-      // Function to create a single drop element
-      function createDrop() {
-        const drop = document.createElement("div");
-        drop.classList.add("drop");
-        // Randomize initial position and size
-        drop.style.left = `${Math.random() * 100}vw`;
-        drop.style.width = `1px`; // Random width between 1px and 5px
-        drop.style.height = `${Math.random() * 30 + 10}px`; // Random height between 10px and 40px
-        return drop;
-      }
-
-      // Create and animate drops
       function initializeBloodRain() {
         const bloodRain = document.querySelector(".blood-rain");
 
-        // Create a large number of drops
+        // Reduce the number of drops
         for (let i = 0; i < 1000; i++) {
-          const drop = createDrop();
+          const drop = document.createElement("div");
+          drop.classList.add("drop");
+          // Randomize initial position and size
+          drop.style.left = `${Math.random() * 100}vw`;
+          drop.style.width = `1px`; // Random width between 1px and 4px
+          drop.style.height = `${Math.random() * 30 + 10}px`; // Random height between 10px and 40px
+          drop.style.animationDuration = `${Math.random() * 3 + 2}s`; // Randomize duration between 2s and 5s
           bloodRain.appendChild(drop);
-
-          anime({
-            targets: drop,
-            translateY: ["-100vh", "100vh"], // Animate from top to bottom
-            opacity: [0.8, 0], // Fade out
-            easing: "linear",
-            duration: 2000 + Math.random() * 3000, // Randomize duration between 2s and 5s
-            delay: Math.random() * 1000, // Randomize delay
-            loop: true,
-          });
         }
       }
 

@@ -1,35 +1,65 @@
-body{
+body {
     background-image: url('../images/grunge-bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     font-family: "Courier New", Courier, monospace;
 }
 
+/* Styles for the blood rain effect */
 .blood-rain {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
     pointer-events: none;
-    z-index: 1000;
-    opacity: 0.9;
+    overflow: hidden;
+    z-index: 1;
 }
 
-.drop {
+.blood-rain .drop {
     position: absolute;
-    width: 2px;
-    /* Width of the drops */
-    height: 20px;
-    /* Height of the drops */
-    background: rgba(255, 0, 0, 0.8);
-    /* Red color with opacity */
-    border-radius: 50%;
-    /* Circular drops */
-    box-shadow: 0 0 5px rgba(255, 0, 0, 0.8);
-    /* Add shadow for more depth */
+    background: red;
+    opacity: 0.8;
+    animation: fall linear infinite;
 }
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100vh);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+/* Randomize drop properties */
+.blood-rain .drop:nth-child(1) {
+    left: 10vw;
+    width: 2px;
+    height: 20px;
+    animation-duration: 2s;
+}
+
+.blood-rain .drop:nth-child(2) {
+    left: 20vw;
+    width: 2px;
+    height: 25px;
+    animation-duration: 2.5s;
+}
+
+.blood-rain .drop:nth-child(3) {
+    left: 30vw;
+    width: 2px;
+    height: 30px;
+    animation-duration: 3s;
+}
+
+/* Add more rules with different values as needed */
+
 
 @keyframes pulse {
     0% {
@@ -185,6 +215,7 @@ body{
 .code-highlight {
     color: #569cd6;
     /* Blue for keywords and identifiers */
+    font-weight: bold;
     /* Bold keywords */
 }
 
@@ -223,12 +254,15 @@ body{
     display: inline-block;
     margin: 0 4px;
 }
+
 .close-button {
     background: #ff5f57;
 }
+
 .minimize-button {
     background: #ffbd44;
 }
+
 .maximize-button {
     background: #27c93f;
 }
