@@ -1,0 +1,117 @@
+/* Add to your style.css */
+.blood-rain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 1000;
+    opacity: 0.7;
+}
+
+.drop {
+    position: absolute;
+    width: 2px;
+    height: 20px;
+    background: linear-gradient(to bottom, #ff0000, #600000);
+    opacity: 0.8;
+    pointer-events: none;
+    /* Ensure they don't block interactions */
+}
+
+.heading-font {
+    font-family: "Courier New", Courier, monospace;
+}
+
+.glitch-effect {
+    position: relative;
+    display: inline-block;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.glitch-effect::before,
+.glitch-effect::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    color: inherit;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    animation: glitch 3s infinite;
+}
+
+.glitch-effect::before {
+    left: -2px;
+    text-shadow: 1px 0 #ff00c1;
+    animation-delay: -0.5s;
+}
+
+.glitch-effect::after {
+    left: 2px;
+    text-shadow: -1px 0 #00fff9;
+}
+
+@keyframes glitch {
+    0% {
+        clip: rect(0, 0, 0, 0);
+    }
+
+    10% {
+        clip: rect(30px, 9999px, 60px, 0);
+        transform: translate(-5px, 5px);
+    }
+
+    20% {
+        clip: rect(10px, 9999px, 40px, 0);
+        transform: translate(5px, -5px);
+    }
+
+    30% {
+        clip: rect(20px, 9999px, 50px, 0);
+        transform: translate(-5px, 5px);
+    }
+
+    40% {
+        clip: rect(30px, 9999px, 60px, 0);
+        transform: translate(5px, -5px);
+    }
+
+    50% {
+        clip: rect(40px, 9999px, 70px, 0);
+        transform: translate(-5px, 5px);
+    }
+
+    60% {
+        clip: rect(50px, 9999px, 80px, 0);
+        transform: translate(5px, -5px);
+    }
+
+    70% {
+        clip: rect(60px, 9999px, 90px, 0);
+        transform: translate(-5px, 5px);
+    }
+
+    80% {
+        clip: rect(70px, 9999px, 100px, 0);
+        transform: translate(5px, -5px);
+    }
+
+    90% {
+        clip: rect(80px, 9999px, 110px, 0);
+        transform: translate(-5px, 5px);
+    }
+
+    100% {
+        clip: rect(90px, 9999px, 120px, 0);
+        transform: translate(5px, -5px);
+    }
+}
