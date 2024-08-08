@@ -3,15 +3,319 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nas's Portfolio</title>
-    <link rel="stylesheet" href="assets/style.css" />
+    <title>belongsTo Nas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <style>
+      /* Custom styles for the grunge/emo theme */
+      .grunge-bg {
+        background-image: url("assets/images/grunge-bg.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      .heading-font {
+        font-family: "Courier New", Courier, monospace;
+      }
+      .glitch-effect {
+        position: relative;
+        display: inline-block;
+      }
+      .glitch-effect::before,
+      .glitch-effect::after {
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: inherit;
+        color: inherit;
+        animation: glitch 3s infinite linear alternate-reverse;
+      }
+      .glitch-effect::before {
+        left: 2px;
+        text-shadow: -2px 0 #ff00c1;
+        clip: rect(44px, 450px, 56px, 0);
+      }
+      .glitch-effect::after {
+        left: -2px;
+        text-shadow: -2px 0 #00fff9, 2px 2px #ff6c00;
+        clip: rect(44px, 450px, 56px, 0);
+      }
+
+      @keyframes glitch {
+        0% {
+          clip: rect(52px, 9999px, 58px, 0);
+        }
+        10% {
+          clip: rect(42px, 9999px, 68px, 0);
+        }
+        20% {
+          clip: rect(64px, 9999px, 22px, 0);
+        }
+        30% {
+          clip: rect(46px, 9999px, 60px, 0);
+        }
+        40% {
+          clip: rect(72px, 9999px, 34px, 0);
+        }
+        50% {
+          clip: rect(36px, 9999px, 82px, 0);
+        }
+        60% {
+          clip: rect(70px, 9999px, 36px, 0);
+        }
+        70% {
+          clip: rect(68px, 9999px, 40px, 0);
+        }
+        80% {
+          clip: rect(44px, 9999px, 64px, 0);
+        }
+        90% {
+          clip: rect(38px, 9999px, 72px, 0);
+        }
+        100% {
+          clip: rect(60px, 9999px, 50px, 0);
+        }
+      }
+
+      /* .waves > use {
+        animation: move-forever 2s -2s linear infinite;
+      }
+
+      .waves > use:nth-child(2) {
+        animation-delay: -3s;
+        animation-duration: 6s;
+      }
+      .waves > use:nth-child(3) {
+        animation-delay: -4s;
+        animation-duration: 3s;
+      }
+
+      @keyframes move-forever {
+        0% {
+          transform: translate(-90px, 0%);
+        }
+        100% {
+          transform: translate(85px, 0%);
+        }
+      }
+
+      svg {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 30vw;
+        max-height: 200px;
+      } */
+    </style>
   </head>
-  <body>
-    <div id="wrapper">
-      <main>
-        <div class="welcome shadow-pop-br">
-          Welcome to my Portfolio
+  <body class="bg-gray-900 text-gray-100 grunge-bg">
+    <!-- <svg
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      viewBox="0 24 150 50"
+      preserveAspectRatio="none"
+    >
+      <defs>
+        <path
+          id="gentle-wave"
+          d="M-160 44c30 0 
+        58-18 88-18s
+        58 18 88 18 
+        58-18 88-18 
+        58 18 88 18
+        v44h-352z"
+        />
+      </defs>
+      <g class="waves">
+        <use
+          xlink:href="#gentle-wave"
+          x="50"
+          y="0"
+          fill="#03ffff"
+          fill-opacity=".2"
+        />
+        <use
+          xlink:href="#gentle-wave"
+          x="50"
+          y="3"
+          fill="#03ffff"
+          fill-opacity=".5"
+        />
+        <use
+          xlink:href="#gentle-wave"
+          x="50"
+          y="6"
+          fill="#03ffff"
+          fill-opacity=".9"
+        />
+      </g>
+    </svg> -->
+
+    <!-- Header Section -->
+    <header class="text-center py-16" id="header">
+      <h1
+        class="text-5xl font-bold heading-font text-red-600 bg-gray-800 w-fit m-auto glitch-effect"
+        data-text="[Your Name]"
+      >
+        [Your Name]
+      </h1>
+      <p class="text-xl mt-4 text-gray-400">
+        Backend Developer | Code Enthusiast | Tech Explorer
+      </p>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 px-8 w-10/12 m-auto">
+      <h2
+        class="text-4xl font-bold text-white heading-font glitch-effect"
+        data-text="About Me"
+      >
+        About Me
+      </h2>
+      <p class="mt-4 text-lg text-gray-300">
+        I'm a backend web developer with a passion for building scalable and
+        efficient systems. I love to explore new technologies and challenge
+        myself with complex problems.
+      </p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 px-8 bg-gray-800 w-10/12 m-auto">
+      <h2
+        class="text-4xl font-bold text-white heading-font glitch-effect"
+        data-text="Projects"
+      >
+        Projects
+      </h2>
+      <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-8" id="projects">
+        <div
+          class="bg-gray-700 p-6 rounded-lg shadow-lg hover:shadow-2xl transition project-item"
+        >
+          <h3
+            class="text-2xl font-bold text-red-600 glitch-effect"
+            data-text="Project One"
+          >
+            Project One
+          </h3>
+          <p class="mt-2 text-gray-300">
+            A brief description of the project...
+          </p>
         </div>
-      </main>
+        <div
+          class="bg-gray-700 p-6 rounded-lg shadow-lg hover:shadow-2xl transition project-item"
+        >
+          <h3
+            class="text-2xl font-bold text-red-600 glitch-effect"
+            data-text="Project Two"
+          >
+            Project Two
+          </h3>
+          <p class="mt-2 text-gray-300">
+            A brief description of the project...
+          </p>
+        </div>
+        <!-- Add more projects as needed -->
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 px-8 w-10/12 m-auto">
+      <h2
+        class="text-4xl font-bold text-white heading-font glitch-effect"
+        data-text="Skills"
+      >
+        Skills
+      </h2>
+      <div class="mt-8 space-y-4">
+        <div class="flex justify-between items-center">
+          <span class="text-lg font-semibold glitch-effect" data-text="Node.js"
+            >Node.js</span
+          >
+          <span class="text-red-600">80%</span>
+        </div>
+        <div class="w-full bg-gray-700 h-2 rounded-full">
+          <div
+            class="bg-red-600 h-full rounded-full skill-bar"
+            style="width: 80%"
+          ></div>
+        </div>
+        <!-- Repeat for other skills -->
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 px-8 bg-gray-800 w-10/12 m-auto">
+      <h2
+        class="text-4xl font-bold text-white heading-font glitch-effect"
+        data-text="Contact"
+      >
+        Contact
+      </h2>
+      <form class="mt-8 space-y-4">
+        <input
+          type="text"
+          placeholder="Your Name"
+          class="w-full p-3 bg-gray-900 text-gray-300 border border-gray-600 rounded-lg"
+        />
+        <input
+          type="email"
+          placeholder="Your Email"
+          class="w-full p-3 bg-gray-900 text-gray-300 border border-gray-600 rounded-lg"
+        />
+        <textarea
+          placeholder="Your Message"
+          class="w-full p-3 bg-gray-900 text-gray-300 border border-gray-600 rounded-lg h-32"
+        ></textarea>
+        <button
+          type="submit"
+          class="w-full p-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition"
+        >
+          Send Message
+        </button>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-8">
+      <p class="text-gray-500">&copy; 2024 [Your Name]. All rights reserved.</p>
+    </footer>
+
+    <script>
+      // Anime.js animations
+      anime({
+        targets: "#header h1",
+        opacity: [0, 1],
+        translateY: [-50, 0],
+        duration: 1500,
+        easing: "easeOutExpo",
+      });
+
+      anime({
+        targets: "#header p",
+        opacity: [0, 1],
+        translateY: [50, 0],
+        duration: 1500,
+        delay: 500,
+        easing: "easeOutExpo",
+      });
+
+      anime({
+        targets: ".skill-bar",
+        width: [0, "80%"],
+        duration: 1500,
+        easing: "easeOutExpo",
+      });
+
+      anime({
+        targets: ".glitch-effect",
+        loop: true,
+        duration: 1000,
+        easing: "linear",
+      });
+    </script>
   </body>
 </html>
