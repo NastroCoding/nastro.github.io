@@ -12,105 +12,165 @@
     <!-- Header Section -->
     <header class="text-center py-16" id="header">
       <h1
-        class="text-5xl font-bold heading-font text-red-600 bg-gray-800 w-fit m-auto glitch-effect"
+        class="text-5xl font-bold text-red-600 bg-gray-800 w-fit m-auto rounded-lg heading-font glitch-effect"
         data-text="HELP"
       >
         [Nas]
       </h1>
-      <p class="text-xl mt-4 text-gray-400">
-        Backend Developer | Code Enthusiast | Tech Explorer
-      </p>
+      <p class="text-xl mt-4 text-red-600 heading-font glowing-text">
+        <b>
+          Web Developer | Code Enthusiast | Tech Explorer
+        </b>
+      </p>      
     </header>
 
     <!-- About Section -->
-    <section id="about" class="py-16 px-8 w-10/12 m-auto">
+    <section id="about" class="py-16 px-8 w-10/12 m-auto bg-gray-900 rounded-t-lg">
       <h2
-        class="text-4xl font-bold text-white heading-font"
+        class="text-4xl font-bold text-red-600 heading-font"
         data-text="About Me"
       >
-        About Me
+        [About Me]
       </h2>
-      <p class="mt-4 text-lg text-gray-300">
-        I'm a backend web developer with a passion for building scalable and
+      <p class="mt-4 text-lg text-gray-300 heading-font">
+        I'm a web developer with a passion for building scalable and
         efficient systems. I love to explore new technologies and challenge
-        myself with complex problems.
+        myself with complex problems. I'm doing my best to compete in this
+        position.
       </p>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-16 px-8 bg-gray-800 w-10/12 m-auto">
-      <h2
-        class="text-4xl font-bold text-white heading-font"
-        data-text="Projects"
-      >
-        Projects
+    <section id="projects" class="py-16 px-8 bg-gray-800 w-10/12 m-auto mb-8 rounded-b-lg">
+      <h2 class="text-4xl font-bold text-red-600 heading-font" data-text="Projects">
+        [Projects]
       </h2>
-      <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-8" id="projects">
-        <div
-          class="bg-gray-700 p-6 rounded-lg shadow-lg hover:shadow-2xl transition project-item"
-        >
-          <h3 class="text-2xl font-bold text-red-600" data-text="Project One">
-            Project One
-          </h3>
-          <p class="mt-2 text-gray-300">
-            A brief description of the project...
-          </p>
+      <div class="mt-8 space-y-8">
+        <!-- Project 1 -->
+        <div class="relative bg-gray-700 p-6 rounded-lg shadow-lg hover:shadow-2xl transition">
+          <!-- Apple-Style Top Bar Inside Card -->
+          <div class="absolute top-0 left-0 w-full bg-gray-900 text-white rounded-t-lg shadow-md flex items-center p-2">
+            <div class="flex items-center">
+              <span class="apple-nav-button close-button"></span>
+              <span class="apple-nav-button minimize-button"></span>
+              <span class="apple-nav-button maximize-button"></span>
+            </div>
+            <div class="ml-auto text-sm heading-font">
+              Project One
+            </div>
+          </div>
+          
+          <pre class="code-block mt-10">
+            <span class="code-highlight">{
+                "title" : "Travel Web",
+                "description": "A travel website showcasing popular destinations.",
+                "technologies": ["HTML", "CSS", "JavaScript", "Laravel", "Tailwind CSS"],
+                "start-date": "1 July 2024",
+                "end-date": "1 August 2024",
+                "link": "<a href='https://example.com' class='code-string'>Live Demo</a>",
+                "screenshot": "<a class='code-string' data-modal-target='modal1'>View Screenshot</a>"
+            }</span>
+          </pre>
         </div>
-        <div
-          class="bg-gray-700 p-6 rounded-lg shadow-lg hover:shadow-2xl transition project-item"
-        >
-          <h3 class="text-2xl font-bold text-red-600" data-text="Project Two">
-            Project Two
-          </h3>
-          <p class="mt-2 text-gray-300">
-            A brief description of the project...
-          </p>
+    
+        <!-- Project 2 -->
+        <div class="relative bg-gray-700 p-6 rounded-lg shadow-lg hover:shadow-2xl transition">
+          <!-- Apple-Style Top Bar Inside Card -->
+          <div class="absolute top-0 left-0 w-full bg-gray-900 text-white rounded-t-lg shadow-md flex items-center p-2">
+            <div class="flex items-center">
+              <span class="apple-nav-button close-button"></span>
+              <span class="apple-nav-button minimize-button"></span>
+              <span class="apple-nav-button maximize-button"></span>
+            </div>
+            <div class="ml-auto text-sm heading-font">
+              Project Two
+            </div>
+          </div>
+    
+          <pre class="code-block mt-10">
+            <span class="code-highlight">{
+                "title" : "Quiz App",
+                "description": "A fully functional Quiz App that can handle score calculation, and multiple quiz type",
+                "technologies": ["HTML", "CSS", "JavaScript", "Laravel", "Bootstrap", "jQuery"],
+                "start-date": "25 April 2024",
+                "end-date": "30 June 2024",
+                "link": "<a href='https://example.com' class='code-string'>Live Demo</a>",
+                "screenshot": "<a class='code-string' data-modal-target='modal2'>View Screenshot</a>"
+            }</span>
+          </pre>
         </div>
-        <!-- Add more projects as needed -->
       </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="py-16 px-8 w-10/12 m-auto">
-      <h2 class="text-4xl font-bold text-white heading-font" data-text="Skills">
-        Skills
-      </h2>
-      <div class="mt-8 space-y-4">
-        <div class="flex justify-between items-center">
-          <span class="text-lg font-semibold" data-text="Node.js">Node.js</span>
-          <span class="text-red-600">80%</span>
-        </div>
-        <div class="w-full bg-gray-700 h-2 rounded-full">
-          <div
-            class="bg-red-600 h-full rounded-full skill-bar"
-            style="width: 80%"
-          ></div>
-        </div>
-        <!-- Repeat for other skills -->
+    <!-- Modals -->
+    <div
+      id="modal1"
+      class="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-75 z-50 hidden"
+    >
+      <div class="bg-gray-900 p-4 rounded-lg shadow-lg relative">
+        <button
+          class="absolute top-2 right-2 text-white text-xl"
+          data-modal-close
+        >
+          &times;
+        </button>
+        <img
+          src="assets/images/project1.jpg"
+          alt="Project 1 Screenshot"
+          class="w-full h-auto rounded-lg"
+        />
       </div>
-    </section>
+    </div>
+
+    <div
+      id="modal2"
+      class="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-75 z-50 hidden"
+    >
+      <div class="bg-gray-900 p-4 rounded-lg shadow-lg relative">
+        <button
+          class="absolute top-2 right-2 text-white text-xl"
+          data-modal-close
+        >
+          &times;
+        </button>
+        <img
+          src="assets/images/project2.jpg"
+          alt="Project 2 Screenshot"
+          class="w-full h-auto rounded-lg"
+        />
+      </div>
+    </div>
 
     <!-- Footer -->
-    <footer class="text-center py-8">
-      <p class="text-gray-500">&copy; 2024 [Your Name]. All rights reserved.</p>
+    <footer class="text-center py-8 heading-font bg-gray-900">
+      <p class="text-gray-500">&copy; 2024 Nas. All rights reserved.</p>
     </footer>
 
-    <body class="bg-gray-900 text-gray-100">
-      <!-- Your existing content -->
-
-      <!-- Blood Rain Effect -->
-      <div class="blood-rain">
-        <!-- Multiple divs to create the blood droplets effect -->
-        <div class="drop"></div>
-        <div class="drop"></div>
-        <div class="drop"></div>
-        <div class="drop"></div>
-        <div class="drop"></div>
-        <!-- Add more drops as needed -->
-      </div>
-    </body>
+    <div class="blood-rain"></div>
 
     <script>
+      document.querySelectorAll("[data-modal-target]").forEach((button) => {
+        button.addEventListener("click", () => {
+          const modalId = button.getAttribute("data-modal-target");
+          document.getElementById(modalId).classList.remove("hidden");
+        });
+      });
+
+      // Close modal
+      document.querySelectorAll("[data-modal-close]").forEach((button) => {
+        button.addEventListener("click", () => {
+          button.closest(".modal").classList.add("hidden");
+        });
+      });
+
+      // Close modal when clicking outside
+      document.querySelectorAll(".modal").forEach((modal) => {
+        modal.addEventListener("click", (event) => {
+          if (event.target === modal) {
+            modal.classList.add("hidden");
+          }
+        });
+      });
+
       // Anime.js animations
       anime({
         targets: "#header h1",
@@ -142,6 +202,7 @@
         duration: 1000,
         easing: "linear",
       });
+
       // Select all drops
       const drops = document.querySelectorAll(".drop");
 
@@ -151,7 +212,7 @@
         drop.classList.add("drop");
         // Randomize initial position and size
         drop.style.left = `${Math.random() * 100}vw`;
-        drop.style.width = `${Math.random() * 4 + 1}px`; // Random width between 1px and 5px
+        drop.style.width = `1px`; // Random width between 1px and 5px
         drop.style.height = `${Math.random() * 30 + 10}px`; // Random height between 10px and 40px
         return drop;
       }
