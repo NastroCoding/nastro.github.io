@@ -293,27 +293,27 @@
         });
       }
 
-      function initializeBloodRain() {
-        const bloodRain = document.querySelector(".blood-rain");
+      // function initializeBloodRain() {
+      //   const bloodRain = document.querySelector(".blood-rain");
 
-        // Reduce the number of drops
-        for (let i = 0; i < 100; i++) {
-          const drop = document.createElement("div");
-          drop.classList.add("drop");
-          // Randomize initial position and size
-          drop.style.left = `${Math.random() * 100}vw`;
-          drop.style.width = `1px`; // Random width between 1px and 4px
-          drop.style.height = `${Math.random() * 30 + 10}px`; // Random height between 10px and 40px
-          drop.style.animationDuration = `${Math.random() * 3 + 2}s`; // Randomize duration between 2s and 5s
-          drop.style.width = `1px`;
-          drop.style.height = `${Math.random() * 30 + 10}px`;
-          drop.style.animationDuration = `${Math.random() * 3 + 2}s`;
-          bloodRain.appendChild(drop);
-        }
-      }
+      //   // Reduce the number of drops
+      //   for (let i = 0; i < 100; i++) {
+      //     const drop = document.createElement("div");
+      //     drop.classList.add("drop");
+      //     // Randomize initial position and size
+      //     drop.style.left = `${Math.random() * 100}vw`;
+      //     drop.style.width = `1px`; // Random width between 1px and 4px
+      //     drop.style.height = `${Math.random() * 30 + 10}px`; // Random height between 10px and 40px
+      //     drop.style.animationDuration = `${Math.random() * 3 + 2}s`; // Randomize duration between 2s and 5s
+      //     drop.style.width = `1px`;
+      //     drop.style.height = `${Math.random() * 30 + 10}px`;
+      //     drop.style.animationDuration = `${Math.random() * 3 + 2}s`;
+      //     bloodRain.appendChild(drop);
+      //   }
+      // }
 
-      // Initialize the blood rain effect
-      initializeBloodRain();
+      // // Initialize the blood rain effect
+      // initializeBloodRain();
     </script>
   </body>
 </html>
