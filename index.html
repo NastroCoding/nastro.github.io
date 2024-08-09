@@ -4,9 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>belongsTo Nas</title>
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <script src="assets/js/anime.min.js"></script>
-    <script src="assets/js/tailwind.config.js"></script>
+    <!-- Preload CSS -->
+  <link rel="preload" href="assets/css/style.css" as="style" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  
+  <!-- Preload JavaScript -->
+  <link rel="preload" href="assets/js/anime.min.js" as="script" />
+  <link rel="preload" href="assets/js/tailwind.config.js" as="script" />
+  
+  <script defer src="assets/js/anime.min.js"></script>
+  <script defer src="assets/js/tailwind.config.js"></script>
     <script>
       tailwind.config = {
         theme: {
@@ -242,7 +249,6 @@
       <marquee width="100%" direction="left" height="40px">
         Congrats you found the sidebar.
       </marquee>
-      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/4ZGQAe5lCZOpYpSY5x8e1C?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
     </div>
 
     <script>
