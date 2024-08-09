@@ -4,214 +4,212 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>belongsTo Nas</title>
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="assets/js/tailwind.config.js"></script>
-    <script src="assets/js/anime.min.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              blood: "#8B0000",
+              midnight: "#1a0000",
+              "neon-red": "#FF3131",
+            },
+            fontFamily: {
+              creepy: ["Courier", "cursive"],
+              retro: ["Press Start 2P", "monospace"],
+            },
+          },
+        },
+      };
+    </script>
   </head>
-  <body class="bg-gray-900 text-gray-100">
-    <!-- Header Section -->
-    <header class="text-center py-16" id="header">
+  <body class="bg-midnight text-red-300 font-retro">
+    <div class="blood-rain"></div>
+    <header class="py-6 relative">
       <h1
-        class="text-5xl font-bold text-red-600 bg-gray-800 w-fit m-auto rounded-lg heading-font glitch-effect"
-        data-text="HELP"
+        class="text-6xl font-creepy text-center glitch neon-text"
+        data-text="Dark Portfolio"
       >
-        [Nas]
+        [NAS]
       </h1>
-      <p class="text-xl mt-4 text-red-600 heading-font glowing-text">
-        <b> Web Developer | Code Enthusiast | Tech Explorer </b>
-      </p>
+      <svg
+        class="absolute top-0 left-0 w-full h-full"
+        viewBox="0 0 100 100"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M0,0 L100,0 L100,100 L0,100 Z"
+          fill="none"
+          stroke="#FF3131"
+          stroke-width="0.5"
+        >
+          <animate
+            attributeName="d"
+            dur="10s"
+            repeatCount="indefinite"
+            values="M0,0 L100,0 L100,100 L0,100 Z;
+                            M0,0 L90,10 L100,90 L10,100 Z;
+                            M0,0 L100,0 L100,100 L0,100 Z"
+          />
+        </path>
+      </svg>
     </header>
 
-    <!-- About Section -->
-    <section
-      id="about"
-      class="py-16 px-8 w-10/12 m-auto bg-gray-900 rounded-t-lg"
-    >
-      <h2
-        class="text-4xl font-bold text-red-600 heading-font"
-        data-text="About Me"
-      >
-        [About Me]
-      </h2>
-      <p class="mt-4 text-lg text-gray-300 heading-font">
-        I'm a web developer with a passion for building scalable and efficient
-        systems. I love to explore new technologies and challenge myself with
-        complex problems. I'm doing my best to compete in this position.
-      </p>
-    </section>
-
-    <section
-      id="projects"
-      class="py-16 px-8 bg-gray-800 w-10/12 m-auto mb-8 rounded-b-lg"
-    >
-      <h2
-        class="text-4xl font-bold text-red-600 heading-font"
-        data-text="Projects"
-      >
-        [Projects]
-      </h2>
-      <div class="mt-8 space-y-8">
-        <!-- Project 1 -->
-        <div
-          class="relative bg-gray-700 p-6 rounded-lg shadow-lg hover:shadow-2xl transition"
-        >
-          <!-- Apple-Style Top Bar Inside Card -->
-          <div
-            class="absolute top-0 left-0 w-full bg-gray-900 text-white rounded-t-lg shadow-md flex items-center p-2"
-          >
-            <div class="flex items-center">
-              <span class="apple-nav-button close-button"></span>
-              <span class="apple-nav-button minimize-button"></span>
-              <span class="apple-nav-button maximize-button"></span>
-            </div>
-            <div class="ml-auto text-sm heading-font">Project One</div>
-          </div>
-
-          <pre class="code-block mt-10">
-            <span class="code-highlight">{
-                "title" : "Travel Web",
-                "description": "A travel website showcasing popular destinations.",
-                "technologies": ["HTML", "CSS", "JavaScript", "Laravel", "Tailwind CSS"],
-                "start-date": "1 July 2024",
-                "end-date": "1 August 2024",
-                "link": "<a href='https://example.com' class='code-string'>Live Demo</a>",
-                "screenshot": "<a class='code-string' data-modal-target='modal1'>View Screenshot</a>"
-            }</span>
-          </pre>
-        </div>
-
-        <!-- Project 2 -->
-        <div
-          class="relative bg-gray-700 p-6 rounded-lg shadow-lg hover:shadow-2xl transition"
-        >
-          <!-- Apple-Style Top Bar Inside Card -->
-          <div
-            class="absolute top-0 left-0 w-full bg-gray-900 text-white rounded-t-lg shadow-md flex items-center p-2"
-          >
-            <div class="flex items-center">
-              <span class="apple-nav-button close-button"></span>
-              <span class="apple-nav-button minimize-button"></span>
-              <span class="apple-nav-button maximize-button"></span>
-            </div>
-            <div class="ml-auto text-sm heading-font">Project Two</div>
-          </div>
-
-          <pre class="code-block mt-10">
-            <span class="code-highlight">{
-                "title" : "Quiz App",
-                "description": "A fully functional Quiz App that can handle score calculation, and multiple quiz type",
-                "technologies": ["HTML", "CSS", "JavaScript", "Laravel", "Bootstrap", "jQuery"],
-                "start-date": "25 April 2024",
-                "end-date": "30 June 2024",
-                "link": "<a href='https://example.com' class='code-string'>Live Demo</a>",
-                "screenshot": "<a class='code-string' data-modal-target='modal2'>View Screenshot</a>"
-            }</span>
-          </pre>
-        </div>
-      </div>
-    </section>
-
-    <!-- Modals -->
-    <div
-      id="modal1"
-      class="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-75 z-50 hidden"
-    >
-      <div class="bg-gray-900 p-4 rounded-lg shadow-lg relative">
-        <button
-          class="absolute top-2 right-2 text-white text-xl"
-          data-modal-close
-        >
-          &times;
-        </button>
-        <img
-          src="assets/images/project1.jpg"
-          alt="Project 1 Screenshot"
-          class="w-full h-auto rounded-lg"
-        />
+    <div class="marquee mb-4">
+      <div class="marquee-content">
+        Welcome to the realm of digital nightmares... Explore at your own
+        risk... Abandon all hope, ye who enter here...
       </div>
     </div>
 
-    <div
-      id="modal2"
-      class="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-75 z-50 hidden"
-    >
-      <div class="bg-gray-900 p-4 rounded-lg shadow-lg relative">
-        <button
-          class="absolute top-2 right-2 text-white text-xl"
-          data-modal-close
-        >
-          &times;
-        </button>
-        <img
-          src="assets/images/project2.jpg"
-          alt="Project 2 Screenshot"
-          class="w-full h-auto rounded-lg"
-        />
-      </div>
-    </div>
+    <nav class="mb-8">
+      <ul class="flex justify-center space-x-6">
+        <li>
+          <a
+            href="#about"
+            class="hover:text-neon-red transition-colors duration-300"
+            >About</a
+          >
+        </li>
+        <li>
+          <a
+            href="#projects"
+            class="hover:text-neon-red transition-colors duration-300"
+            >Projects</a
+          >
+        </li>
+        <li>
+          <a
+            href="#contact"
+            class="hover:text-neon-red transition-colors duration-300"
+            >Contact</a
+          >
+        </li>
+      </ul>
+    </nav>
 
-    <!-- Footer -->
-    <footer class="text-center py-8 heading-font bg-gray-900">
-      <p class="text-gray-500">&copy; 2024 Nas. All rights reserved.</p>
+    <main class="container mx-auto px-4">
+      <section id="about" class="mb-12 retro-box p-6">
+        <h2 class="text-2xl font-creepy mb-4 neon-text">[About Me]</h2>
+        <p class="mb-4">
+          Enter the shadows of my digital realm, where code meets the macabre...
+        </p>
+      </section>
+
+      <section id="projects" class="mb-12">
+        <h2 class="text-2xl font-creepy mb-4 neon-text">[Haunting Projects]</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="retro-box p-4 rounded-lg">
+            <h3 class="text-xl mb-2">Nightmare Generator</h3>
+            <p>A terrifying experience built with JavaScript and WebGL.</p>
+          </div>
+          <div class="retro-box p-4 rounded-lg">
+            <h3 class="text-xl mb-2">Crypt Keeper's CMS</h3>
+            <p>A content management system for the undead.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="mb-12 retro-box p-6">
+        <h2 class="text-2xl font-creepy mb-4 neon-text">[Bring Me To Life]</h2>
+        <form class="space-y-4">
+          <div>
+            <label for="name" class="block mb-1">Your Name (or alias)</label>
+            <input
+              type="text"
+              id="name"
+              class="w-full bg-red-900 p-2 rounded text-white"
+            />
+          </div>
+          <div>
+            <label for="email" class="block mb-1">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              class="w-full bg-red-900 p-2 rounded text-white"
+            />
+          </div>
+          <div>
+            <label for="message" class="block mb-1">Your Dark Message</label>
+            <textarea
+              id="message"
+              rows="4"
+              class="w-full bg-red-900 p-2 rounded text-white"
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="bg-blood text-white px-4 py-2 rounded hover:bg-red-700 transition-colors duration-300"
+          >
+            Send to the Void
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="text-center py-6">
+      <p>&copy; 2024 Nas. All rights cursed.</p>
     </footer>
 
-    <div class="blood-rain"></div>
+    <svg width="0" height="0">
+      <filter id="noise">
+        <feTurbulence
+          type="fractalNoise"
+          baseFrequency="0.65"
+          numOctaves="3"
+          stitchTiles="stitch"
+        />
+        <feColorMatrix type="saturate" values="0" />
+      </filter>
+    </svg>
+
+    <div
+      class="fixed inset-0 pointer-events-none"
+      style="filter: url(#noise); opacity: 0.05"
+    ></div>
 
     <script>
-      document.querySelectorAll("[data-modal-target]").forEach((button) => {
-        button.addEventListener("click", () => {
-          const modalId = button.getAttribute("data-modal-target");
-          document.getElementById(modalId).classList.remove("hidden");
-        });
-      });
-
-      // Close modal
-      document.querySelectorAll("[data-modal-close]").forEach((button) => {
-        button.addEventListener("click", () => {
-          button.closest(".modal").classList.add("hidden");
-        });
-      });
-
-      // Close modal when clicking outside
-      document.querySelectorAll(".modal").forEach((modal) => {
-        modal.addEventListener("click", (event) => {
-          if (event.target === modal) {
-            modal.classList.add("hidden");
-          }
-        });
-      });
-
-      // Anime.js animations
+      // Animate elements on page load
       anime({
-        targets: "#header h1",
-        opacity: [0, 1],
-        translateY: [-50, 0],
-        duration: 1500,
-        easing: "easeOutExpo",
-      });
-
-      anime({
-        targets: "#header p",
-        opacity: [0, 1],
+        targets: "header, nav, section",
         translateY: [50, 0],
-        duration: 1500,
-        delay: 500,
+        opacity: [0, 1],
         easing: "easeOutExpo",
+        duration: 1500,
+        delay: anime.stagger(200),
       });
 
-      anime({
-        targets: ".skill-bar",
-        width: [0, "80%"],
-        duration: 1500,
-        easing: "easeOutExpo",
-      });
+      // Create floating particles
+      const particlesContainer = document.createElement("div");
+      particlesContainer.style.position = "fixed";
+      particlesContainer.style.inset = "0";
+      particlesContainer.style.pointerEvents = "none";
+      particlesContainer.style.zIndex = "1000";
+      document.body.appendChild(particlesContainer);
 
-      anime({
-        targets: ".glitch-effect",
-        loop: true,
-        duration: 1000,
-        easing: "linear",
-      });
+      for (let i = 0; i < 50; i++) {
+        const particle = document.createElement("div");
+        particle.style.position = "absolute";
+        particle.style.width = "2px";
+        particle.style.height = "2px";
+        particle.style.background = "#FF3131";
+        particle.style.borderRadius = "50%";
+        particle.style.left = `${Math.random() * 100}%`;
+        particle.style.top = `${Math.random() * 100}%`;
+        particlesContainer.appendChild(particle);
+
+        anime({
+          targets: particle,
+          translateX: () => anime.random(-100, 100),
+          translateY: () => anime.random(-100, 100),
+          opacity: [0.5, 0],
+          easing: "easeInOutQuad",
+          duration: () => anime.random(1000, 3000),
+          loop: true,
+        });
+      }
 
       function initializeBloodRain() {
         const bloodRain = document.querySelector(".blood-rain");
