@@ -27,7 +27,7 @@
   </head>
   <body class="bg-midnight text-red-300 font-retro">
     <div class="blood-rain"></div>
-    <header class="py-6 relative">
+    <header class="py-6 relative header container mx-auto mt-4">
       <h1
         class="text-6xl font-creepy text-center glitch neon-text"
         data-text="Dark Portfolio"
@@ -49,49 +49,13 @@
             attributeName="d"
             dur="10s"
             repeatCount="indefinite"
-            values="M0,0 L100,0 L100,100 L0,100 Z;
-                            M0,0 L90,10 L100,90 L10,100 Z;
-                            M0,0 L100,0 L100,100 L0,100 Z"
+            values="M0,0 L100,0 L100,100 L0,100 Z; M0,0 L90,10 L100,90 L10,100 Z; M0,0 L100,0 L100,100 L0,100 Z"
           />
         </path>
       </svg>
     </header>
 
-    <div class="marquee mb-4">
-      <div class="marquee-content">
-        Another wander in the night, Let me paint the view, Colour a town with
-        my light, For every moment shared with you, Not out in the day, But
-        never fully gone, Going to be back again, Until the coming of a dawn.
-      </div>
-    </div>
-
-    <nav class="mb-8">
-      <ul class="flex justify-center space-x-6">
-        <li>
-          <a
-            href="#about"
-            class="hover:text-neon-red transition-colors duration-300"
-            >About</a
-          >
-        </li>
-        <li>
-          <a
-            href="#projects"
-            class="hover:text-neon-red transition-colors duration-300"
-            >Projects</a
-          >
-        </li>
-        <li>
-          <a
-            href="#contact"
-            class="hover:text-neon-red transition-colors duration-300"
-            >Contact</a
-          >
-        </li>
-      </ul>
-    </nav>
-
-    <main class="container mx-auto px-4">
+    <main class="container mx-auto px-4 content mt-10">
       <section id="about" class="mb-12 retro-box p-6">
         <h2 class="text-2xl font-creepy mb-4 neon-text">[About Me]</h2>
         <p class="mb-4">
@@ -151,180 +115,111 @@
               <a href="image1.jpg" class="text-white text-xl">View</a>
             </div>
           </div>
-          <div class="relative group">
-            <img
-              src="image2.jpg"
-              alt="Art Piece 2"
-              class="w-full h-48 object-cover retro-box"
-            />
-            <div
-              class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-            >
-              <a href="image2.jpg" class="text-white text-xl">View</a>
-            </div>
-          </div>
-          <div class="relative group">
-            <img
-              src="image3.jpg"
-              alt="Art Piece 3"
-              class="w-full h-48 object-cover retro-box"
-            />
-            <div
-              class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-            >
-              <a href="image3.jpg" class="text-white text-xl">View</a>
-            </div>
-          </div>
-          <div class="relative group">
-            <img
-              src="image3.jpg"
-              alt="Art Piece 3"
-              class="w-full h-48 object-cover retro-box"
-            />
-            <div
-              class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-            >
-              <a href="image3.jpg" class="text-white text-xl">View</a>
-            </div>
-          </div>
-          <div class="relative group">
-            <img
-              src="image3.jpg"
-              alt="Art Piece 5"
-              class="w-full h-48 object-cover retro-box"
-            />
-            <div
-              class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-            >
-              <a href="image3.jpg" class="text-white text-xl">View</a>
-            </div>
-          </div>
-          <div class="relative group">
-            <img
-              src="image4.jpg"
-              alt="Art Piece 6"
-              class="w-full h-48 object-cover retro-box"
-            />
-            <div
-              class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-            >
-              <a href="image4.jpg" class="text-white text-xl">View</a>
-            </div>
-          </div>
+          <!-- Repeat for other images -->
         </div>
       </section>
 
       <section id="contact" class="mb-12 retro-box p-6">
-        <h2 class="text-2xl font-creepy mb-4 neon-text">
-          [Bring Me To Life]
-        </h2>
+        <h2 class="text-2xl font-creepy mb-4 neon-text">[Bring Me To Life]</h2>
         <ul class="grid grid-cols-2 gap-4 md:grid-cols-4">
           <li>
             <a
               href="https://instagram.com/yourprofile"
               target="_blank"
               class="flex items-center space-x-3 p-4 bg-red-900 rounded hover:bg-red-700 transition-colors duration-300"
+              >Instagram</a
             >
-              <span class="text-white">Instagram</span>
-            </a>
           </li>
           <li>
             <a
               href="https://facebook.com/yourprofile"
               target="_blank"
               class="flex items-center space-x-3 p-4 bg-red-900 rounded hover:bg-red-700 transition-colors duration-300"
+              >Facebook</a
             >
-              <span class="text-white">Facebook</span>
-            </a>
           </li>
           <li>
             <a
               href="https://github.com/yourprofile"
               target="_blank"
               class="flex items-center space-x-3 p-4 bg-red-900 rounded hover:bg-red-700 transition-colors duration-300"
+              >GitHub</a
             >
-              <span class="text-white">GitHub</span>
-            </a>
           </li>
           <li>
             <a
               href="https://twitter.com/yourprofile"
               target="_blank"
               class="flex items-center space-x-3 p-4 bg-red-900 rounded hover:bg-red-700 transition-colors duration-300"
+              >Twitter</a
             >
-              <span class="text-white">Twitter</span>
-            </a>
           </li>
           <li>
             <a
               href="https://linkedin.com/in/yourprofile"
               target="_blank"
               class="flex items-center space-x-3 p-4 bg-red-900 rounded hover:bg-red-700 transition-colors duration-300"
+              >LinkedIn</a
             >
-              <span class="text-white">LinkedIn</span>
-            </a>
           </li>
           <li>
             <a
               href="https://www.tiktok.com/@yourprofile"
               target="_blank"
               class="flex items-center space-x-3 p-4 bg-red-900 rounded hover:bg-red-700 transition-colors duration-300"
+              >TikTok</a
             >
-              <span class="text-white">TikTok</span>
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.youtube.com/channel/yourprofile"
-              target="_blank"
-              class="flex items-center space-x-3 p-4 bg-red-900 rounded hover:bg-red-700 transition-colors duration-300"
-            >
-              <span class="text-white">YouTube</span>
-            </a>
           </li>
           <li>
             <a
               href="https://discord.gg/yourprofile"
               target="_blank"
               class="flex items-center space-x-3 p-4 bg-red-900 rounded hover:bg-red-700 transition-colors duration-300"
+              >Discord</a
             >
-              <span class="text-white">Discord</span>
-            </a>
           </li>
         </ul>
       </section>
+
+      <footer class="text-center">
+        <p>&copy; 2024 Nas. All rights cursed.</p>
+      </footer>
     </main>
 
-    <footer class="text-center py-6">
-      <p>&copy; 2024 Nas. All rights cursed.</p>
-    </footer>
-
-    <svg width="0" height="0">
-      <filter id="noise">
-        <feTurbulence
-          type="fractalNoise"
-          baseFrequency="0.65"
-          numOctaves="3"
-          stitchTiles="stitch"
-        />
-        <feColorMatrix type="saturate" values="0" />
-      </filter>
-    </svg>
-
-    <div
-      class="fixed inset-0 pointer-events-none"
-      style="filter: url(#noise); opacity: 0.05"
-    ></div>
+    <button
+      id="sidebar-toggle"
+      class="absolute top-4 right-4 text-2xl text-red-300 hover:text-neon-red transition-colors duration-300"
+    >
+      ☰
+    </button>
+    <div id="sidebar" class="sidebar">
+      <button id="close-sidebar" class="close-btn">×</button>
+      <h2 class="text-2xl font-creepy mb-4 neon-text">[Sidebar]</h2>
+      <marquee width="100%" direction="left" height="100px">
+        Congrats you found the sidebar.
+      </marquee>
+    </div>
 
     <script>
-      // Animate elements on page load
-      anime({
-        targets: "header, nav, section",
-        translateY: [50, 0],
-        opacity: [0, 1],
-        easing: "easeOutExpo",
-        duration: 1500,
-        delay: anime.stagger(200),
+      const sidebarToggle = document.getElementById("sidebar-toggle");
+      const sidebar = document.getElementById("sidebar");
+      const closeSidebar = document.getElementById("close-sidebar");
+      const content = document.querySelector(".content");
+      const header = document.querySelector(".header");
+      const body = document.querySelector("body");
+
+      sidebarToggle.addEventListener("click", () => {
+        sidebar.classList.toggle("open");
+        content.classList.toggle("zoom-out");
+        header.classList.toggle("zoom-out");
+        body.classList.toggle("zoom-out");
+      });
+
+      closeSidebar.addEventListener("click", () => {
+        sidebar.classList.remove("open");
+        content.classList.remove("zoom-out");
+        header.classList.remove("zoom-out");
+        body.classList.remove("zoom-out");
       });
 
       // Create floating particles
@@ -360,10 +255,15 @@
       function initializeBloodRain() {
         const bloodRain = document.querySelector(".blood-rain");
 
+        // Reduce the number of drops
         for (let i = 0; i < 100; i++) {
           const drop = document.createElement("div");
           drop.classList.add("drop");
+          // Randomize initial position and size
           drop.style.left = `${Math.random() * 100}vw`;
+          drop.style.width = `1px`; // Random width between 1px and 4px
+          drop.style.height = `${Math.random() * 30 + 10}px`; // Random height between 10px and 40px
+          drop.style.animationDuration = `${Math.random() * 3 + 2}s`; // Randomize duration between 2s and 5s
           drop.style.width = `1px`;
           drop.style.height = `${Math.random() * 30 + 10}px`;
           drop.style.animationDuration = `${Math.random() * 3 + 2}s`;
@@ -371,6 +271,7 @@
         }
       }
 
+      // Initialize the blood rain effect
       initializeBloodRain();
     </script>
   </body>

@@ -93,22 +93,6 @@ body {
         0 0 100px #ff3131, 0 0 150px #ff3131;
 }
 
-.marquee {
-    overflow: hidden;
-    background: #3a0000;
-    padding: 5px 0;
-}
-
-.marquee-content {
-    display: inline-block;
-    white-space: nowrap;
-    animation: marquee 20s linear infinite;
-}
-
-.marquee-content:hover {
-    animation-play-state: paused;
-}
-
 @keyframes marquee {
     0% {
         transform: translate3d(100%, 0, 0);
@@ -170,4 +154,55 @@ body {
     width: 2px;
     height: 30px;
     animation-duration: 3s;
+}
+
+body {
+    perspective: 1000px;
+    /* Add perspective for 3D effect */
+    transition: transform 0.5s ease;
+    /* Apply transition to body for smooth effect */
+}
+
+.header,
+nav,
+.content {
+    transition: transform 0.5s ease;
+    /* Apply transition to header, marquee, nav, and content */
+}
+
+.zoom-out {
+    transform: rotateY(10deg) translateX(-75px) scale(0.9);
+    /* Added scale for zoom-out effect */
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: #1a0000;
+    color: #ff3131;
+    transition: transform 0.5s ease;
+    transform: rotateY(-30deg);
+    /* Adjust 3D effect */
+    transform-origin: left;
+    padding: 20px;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar.open {
+    transform: rotateY(-15deg);
+    right: -100px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    color: #ff3131;
+    font-size: 24px;
+    cursor: pointer;
 }
