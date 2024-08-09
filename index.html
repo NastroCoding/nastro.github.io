@@ -263,35 +263,35 @@
         body.classList.remove("zoom-out");
       });
 
-      // Create floating particles
-      const particlesContainer = document.createElement("div");
-      particlesContainer.style.position = "fixed";
-      particlesContainer.style.inset = "0";
-      particlesContainer.style.pointerEvents = "none";
-      particlesContainer.style.zIndex = "1000";
-      document.body.appendChild(particlesContainer);
+      // // Create floating particles
+      // const particlesContainer = document.createElement("div");
+      // particlesContainer.style.position = "fixed";
+      // particlesContainer.style.inset = "0";
+      // particlesContainer.style.pointerEvents = "none";
+      // particlesContainer.style.zIndex = "1000";
+      // document.body.appendChild(particlesContainer);
 
-      for (let i = 0; i < 50; i++) {
-        const particle = document.createElement("div");
-        particle.style.position = "absolute";
-        particle.style.width = "2px";
-        particle.style.height = "2px";
-        particle.style.background = "#FF3131";
-        particle.style.borderRadius = "50%";
-        particle.style.left = `${Math.random() * 100}%`;
-        particle.style.top = `${Math.random() * 100}%`;
-        particlesContainer.appendChild(particle);
+      // for (let i = 0; i < 50; i++) {
+      //   const particle = document.createElement("div");
+      //   particle.style.position = "absolute";
+      //   particle.style.width = "2px";
+      //   particle.style.height = "2px";
+      //   particle.style.background = "#FF3131";
+      //   particle.style.borderRadius = "50%";
+      //   particle.style.left = `${Math.random() * 100}%`;
+      //   particle.style.top = `${Math.random() * 100}%`;
+      //   particlesContainer.appendChild(particle);
 
-        anime({
-          targets: particle,
-          translateX: () => anime.random(-100, 100),
-          translateY: () => anime.random(-100, 100),
-          opacity: [0.5, 0],
-          easing: "easeInOutQuad",
-          duration: () => anime.random(1000, 3000),
-          loop: true,
-        });
-      }
+      //   anime({
+      //     targets: particle,
+      //     translateX: () => anime.random(-100, 100),
+      //     translateY: () => anime.random(-100, 100),
+      //     opacity: [0.5, 0],
+      //     easing: "easeInOutQuad",
+      //     duration: () => anime.random(1000, 3000),
+      //     loop: true,
+      //   });
+      // }
 
       // function initializeBloodRain() {
       //   const bloodRain = document.querySelector(".blood-rain");
