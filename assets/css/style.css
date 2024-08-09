@@ -174,7 +174,7 @@ nav,
     transform: rotateY(10deg) translateX(-75px) scale(0.9);
     /* Added scale for zoom-out effect */
 }
-
+/* test */
 .sidebar {
     position: fixed;
     top: 0;
